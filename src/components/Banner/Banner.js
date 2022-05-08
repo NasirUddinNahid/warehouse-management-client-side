@@ -14,7 +14,18 @@ const Banner = () => {
             <div className='d-flex justify-content-center align-items-center container'>
 
 
-               
+                <div className='d-flex justify-content-center row align-items-center container'>
+                   
+                    <div className='d-flex justify-content-end col-lg-6 '>
+                        <div>
+
+
+                            <div ><img className=' banner-img' src={bannerImg} alt="" /></div>
+
+                        </div>
+
+                    </div>
+                </div>
 
 
 
