@@ -1,0 +1,22 @@
+.Navbar-background {
+    background-color: rgb(200, 220, 216);
+}
+
+.nav-border {
+    border-bottom: 2px solid #e5dcdc;
+}
+
+.navbar-style {
+    text-decoration: none;
+}
+
+.logo {
+    width: "50px"
+
+}
+
+.logo img {
+    border-radius: 7px;
+    padding: 2px;
+
+}
