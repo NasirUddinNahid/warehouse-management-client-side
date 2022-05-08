@@ -39,7 +39,7 @@ const Login = () => {
     let location = useLocation();
     let from = location?.state?.from?.pathname || "/";
     if (user || googleUser) {
-        axios.post('http://localhost:5000/login', { email: user?.user?.email || googleUser?.user?.email })
+        axios.post('https://blooming-lake-66765.herokuapp.com/login', { email: user?.user?.email || googleUser?.user?.email })
             .then(response => localStorage.setItem('accessToken', response.data))
         navigate(from, { replace: true })
 
@@ -84,7 +84,7 @@ const Login = () => {
                         <button type="submit" className="btn btn-primary w-100 mt-3">Login</button>
                     </div>
                     <span onClick={hanldePassworReset} className='cursor '>Forget password?</span>
-                    <h6 className='text-center mt-3' style={{ cursor: "pointer" ,textDecoration:"none" }}><Link to="/signup">
+                    <h6 className='text-center mt-3' style={{ cursor: "pointer", textDecoration: "none" }}><Link to="/signup">
                         Are You New Here? Signup</Link></h6>
 
 

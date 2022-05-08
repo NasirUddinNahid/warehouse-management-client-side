@@ -13,13 +13,13 @@ const ManageInvenrory = () => {
     const [inventories, setInventories] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:5000/inventories')
+        axios.get('https://blooming-lake-66765.herokuapp.com/inventories')
             .then(response => setInventories(response.data))
 
     }, [inventories])
 
     const handleDelete = async id => {
-        await axios.delete(`http://localhost:5000/inventory/${id}`)
+        await axios.delete(`https://blooming-lake-66765.herokuapp.com/inventory/${id}`)
         toast('Item deleted')
 
     }

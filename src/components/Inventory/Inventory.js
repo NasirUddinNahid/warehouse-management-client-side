@@ -8,7 +8,7 @@ const Inventory = () => {
     const navigate = useNavigate()
     const [products, setProducts] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:5000/inventories')
+        axios.get('https://blooming-lake-66765.herokuapp.com/inventories')
             .then(response => setProducts(response.data))
     }, [])
     const sliceProducts = products.slice(0, 6)
