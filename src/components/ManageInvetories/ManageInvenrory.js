@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../firebase.init';
+import './ManageInventory.css';
 
 const ManageInvenrory = () => {
     const [user] = useAuthState(auth)
@@ -21,15 +22,6 @@ const ManageInvenrory = () => {
         await axios.delete(`http://localhost:5000/inventory/${id}`)
         toast('Item deleted')
 
-        // i will do this after assignment
-
-
-
-        // if (deleteUserEmail === user.email) {
-
-        // else {
-        //     toast('You cant delete this. Because you did not add this item. PLease add first')
-        // }
     }
 
     const navigate = useNavigate()
@@ -74,7 +66,7 @@ const ManageInvenrory = () => {
 
             <div className='container '>
                 <div className='text-center mt-3'>
-                    <button onClick={() => navigate("/add-inventory-item")} className='btn btn-success'>Add New item</button>
+                    <button onClick={() => navigate("/add-inventory-item")} className='add-button-fixing'>Add New item</button>
                 </div>
                 <table className="table table-striped w-50 container">
                     <thead>
@@ -87,7 +79,7 @@ const ManageInvenrory = () => {
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='newitem'>
                         {
                             inventories?.map(product => <tr key={product._id}>
 
@@ -96,7 +88,7 @@ const ManageInvenrory = () => {
                                 <td>{product.quantity}</td>
 
 
-                                <td> <Button variant="danger" onClick={() => {
+                                <td className='delet-btn-fixing'> <Button onClick={() => {
 
                                     openModal()
                                     setId(product._id)

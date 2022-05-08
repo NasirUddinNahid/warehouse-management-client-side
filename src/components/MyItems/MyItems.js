@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../firebase.init';
 import Modal from 'react-modal/lib/components/Modal';
+import './MyItems.css';
 
 const MyItems = () => {
     const [user] = useAuthState(auth)
@@ -57,13 +58,13 @@ const MyItems = () => {
     }
     return (
         <div className='container'>
-            <h1 className='text-center'>your items : {myItems.length}</h1>
-            <div className='row'>
+            <h1 className='text-center'>YOUR ITEMS : {myItems.length}</h1>
+            <div className='row  '>
                 {
                     myItems.map(product => <div key={product._id} className='col-lg-4 relative d-flex  mt-5 justify-content-center'>
                         <div className="card " style={{ width: " 18rem" }}>
                             <img src={product.img} className="card-img-top" alt="..." />
-                            <div className="card-body">
+                            <div className="card-body bacground-fixing">
                                 <h5 className="card-title">{product.name}</h5>
                                 <p className="card-text" >{product.description.slice(0, 150)}<button data-bs-toggle="tooltip" data-bs-placement="top" className='btn' title={product.description}>...</button></p>
                                 <p>Price:${product.price}</p>
