@@ -33,7 +33,7 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes >
       <ToastContainer />
-     
+      <Footer></Footer>
 
     </div >
   );
