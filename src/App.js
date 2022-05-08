@@ -30,10 +30,10 @@ function App() {
         <Route path='/add-inventory-item' element={<PrivateRoute><AddInventory></AddInventory></PrivateRoute>}></Route>
         <Route path='/my-items' element={<PrivateRoute><MyItems></MyItems></PrivateRoute>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-       
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes >
       <ToastContainer />
-      <Footer></Footer>
+     
 
     </div >
   );
