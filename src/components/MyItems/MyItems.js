@@ -73,7 +73,7 @@ const MyItems = () => {
                                 <button onClick={() => {
                                     openModal()
                                     setId(product._id)
-                                }} className='btn btn-danger'>Delete</button>
+                                }} className='delet-btn-fixing'>Delete</button>
                             </div>
                         </div>
                     </div>)

@@ -33,7 +33,7 @@ const Header = () => {
                                     user && <Nav.Link ><NavLink style={{ textDecoration: 'none', color: "black" }} to="/my-items">My Items</NavLink> </Nav.Link>
                                 }
                                 {
-                                    user ? <Nav.Link > <button onClick={() => signOut(auth)} className="btn btn-danger">Sign out</button> </Nav.Link> : <Nav.Link ><NavLink style={{ textDecoration: 'none', color: "black" }} to="/login">SignIn</NavLink> </Nav.Link>
+                                    user ? <Nav.Link > <button onClick={() => signOut(auth)} className="signout-btn-fixing">Sign out</button> </Nav.Link> : <Nav.Link ><NavLink style={{ textDecoration: 'none', color: "black" }} to="/login">SignIn</NavLink> </Nav.Link>
                                 }
 
                             </Nav>

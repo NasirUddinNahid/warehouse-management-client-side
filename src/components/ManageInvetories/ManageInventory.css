@@ -1,8 +1,10 @@
 .add-button-fixing {
     background-color: #FF008F;
+    color: #ffffff;
     box-shadow: 0px 12px 23px -8px #ff008f;
     padding: 5px;
     border-radius: 10px;
+
 }
 
 .newitem {
