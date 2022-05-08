@@ -63,7 +63,47 @@ const SignUp = () => {
 
     return (
         <div>
-           
+            <div className='mt-5 d-flex align-items-center justify-content-center '>
+                <div>
+                    <form onSubmit={handleSignup}>
+                        <div className="mb-3">
+                            <label className="form-label">Email address</label>
+                            <input onChange={handleEmailChange} type="email" className="form-control" name="email" required />
+                            <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div className="mb-3">
+                            <label className="form-label">Password</label>
+                            <input onChange={hanldePasswordChange} type="password" className="form-control" required name="password" />
+                        </div>
+                        <div className="">
+                            <label className="form-label">confirm Passoword</label>
+                            <input onChange={handleConfirmPassword} type="password" className="form-control" required name="confirmPassword" />
+                        </div>
+                        <Link to="/login"><h6 className='mt-3'> Already have an account? Login</h6></Link>
+                        {
+                            codeError && <p style={{ color: 'red' }}>{codeError}</p>
+                        }
+                        {
+                            error && <p style={{ color: 'red' }}>{error?.message}</p>
+                        }
+                        {
+                            goolgeError && <p style={{ color: 'red' }}>{goolgeError?.message}</p>
+                        }
+                        {
+                            loading && <Spinner animation="border" variant="warning" />
+                        }
+                        <button type="submit" className="btn btn-primary mt-3 w-100">Signup</button>
+
+                    </form>
+                    <div className='mb-3 d-flex justify-content-center'>
+                        <button onClick={handleGoogle} className='google-auth btn w-100 d-flex justify-content-around border mt-3'>
+                            <img src={GoogleLogo} alt='' />
+                            <p className='mt-2'> Continue with Google </p>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
         </div>
     );
 };
